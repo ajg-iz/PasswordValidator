@@ -42,12 +42,7 @@ public final class PasswordValidator {
     }
 
     public static boolean containsUpperAndLower(String password) {
-        boolean hasBoth = false;
-        if (!password.toLowerCase().equals(password)
-                && !password.toUpperCase().equals(password)) {
-            hasBoth = true;
-        }
-        return hasBoth;
+        return !password.toLowerCase().equals(password) && !password.toUpperCase().equals(password);
     }
 
     public static boolean isCommonPassword(String password, String[] commonPasswords) {
