@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public final class PasswordValidator {
 
     public static void main(String[] args) {
@@ -5,7 +8,7 @@ public final class PasswordValidator {
         if (!args[0].isEmpty()) {
             valid = isValid(args[0]);
         }
-        System.out.println(String.valueOf(valid));
+        System.out.println(valid);
     }
 
     public static boolean isValid(String password) {
@@ -29,6 +32,7 @@ public final class PasswordValidator {
         for (int i = 0; i < 10; i++) {
             if (password.contains(String.valueOf(i))) {
                 foundDigit = true;
+                break;
             }
         }
         return foundDigit;
@@ -42,7 +46,12 @@ public final class PasswordValidator {
         return hasBoth;
     }
     public static boolean isCommonPassword(String password) {
-        return false;
+        boolean foundCommon = false;
+        List<String> mostCommon = Arrays.asList(new String[]{"qwerty","password","qwertyuiop","mynoob","18atcskd2w","1q2w3e4r","3rjs1la7qe","google","1q2w3e4r5t","123qwe","zxcvbnm","1q2w3e"});
+        if (mostCommon.contains(password)) {
+            foundCommon = true;
+        }
+        return foundCommon;
     }
     public static boolean containsSpecialChar(String password, String specialChars) {
         boolean foundSpecialChar = false;
