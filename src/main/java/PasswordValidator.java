@@ -1,12 +1,17 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public final class PasswordValidator {
 
     public static void main(String[] args) {
-        boolean valid = false;
-        if (!args[0].isEmpty()) {
+        boolean valid;
+        Scanner scanner = new Scanner(System.in);
+        if (args.length > 0 && !args[0].isEmpty()) {
             valid = isValid(args[0]);
+        } else {
+            System.out.print("Password: ");
+            valid = isValid(scanner.nextLine());
         }
         System.out.println(valid);
     }
