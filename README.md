@@ -1,6 +1,6 @@
 # PasswordValidator
 Java Klasse zum validieren von Passwörtern.
-Kann als CLI genutzt werden
+Kann als CLI mit oder ohne Parameter genutzt werden
 
 ## Default Policy:
 - mindestens 8 Zeichen,
