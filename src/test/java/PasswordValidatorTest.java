@@ -39,12 +39,12 @@ class PasswordValidatorTest {
 
     @org.junit.jupiter.api.Test
     void isCommonPassword_shouldReturnTrue_ifStringIsInListOfCommonPasswords() {
-        assertTrue(PasswordValidator.isCommonPassword("Blabla?2"));
+        assertTrue(PasswordValidator.isCommonPassword("password"));
     }
 
     @org.junit.jupiter.api.Test
     void isCommonPassword_shouldReturnFalse_ifStringIsNotInListOfCommonPasswords() {
-        assertFalse(PasswordValidator.isCommonPassword("password"));
+        assertFalse(PasswordValidator.isCommonPassword("Blabla?2"));
     }
 
     @org.junit.jupiter.api.Test
